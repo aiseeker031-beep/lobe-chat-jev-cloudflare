@@ -1,12 +1,1 @@
-{
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "lobe-chat-jev-cloudflare",
-  "main": "src/index.js",
-  "compatibility_date": "2026-09-26",
-  "ai": {
-    "binding": "AI"
-  },
-  "observability": {
-    "enabled": true
-  }
-}
+{"$schema":"./node_modules/wrangler/config-schema.json","name":"lobe-chat-jev-cloudflare","main":"src/index.js","compatibility_date":"2026-09-26","ai":{"binding":"AI"},"observability":{"enabled":true}}
