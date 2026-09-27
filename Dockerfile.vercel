@@ -59,7 +59,7 @@ RUN \
     # Enable corepack
     && corepack enable \
     # Use pnpm for corepack
-    && corepack use pnpm \
+    && corepack prepare pnpm@9.7.1 --activate \
     # Install the dependencies
     && pnpm i \
     # Add sharp dependencies
