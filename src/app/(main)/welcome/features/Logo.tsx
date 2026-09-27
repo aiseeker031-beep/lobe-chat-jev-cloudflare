@@ -1,30 +1,53 @@
 'use client';
 
-import dynamic from 'next/dynamic';
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
-const LogoThree = dynamic(() => import('@lobehub/ui/es/LogoThree'), { ssr: false });
-const LogoSpline = dynamic(() => import('@lobehub/ui/es/LogoThree/LogoSpline'), { ssr: false });
-
 const Logo = memo<{ mobile?: boolean }>(({ mobile }) => {
-  return mobile ? (
-    <Center height={240} width={240}>
-      <LogoThree size={240} />
-    </Center>
-  ) : (
+  const size = mobile ? 190 : 260;
+
+  return (
     <Center
       style={{
-        height: `min(482px, 40vw)`,
-        marginBottom: '-10%',
-        marginTop: '-20%',
+        height: mobile ? 230 : 'min(360px, 34vw)',
+        marginBottom: mobile ? 0 : '-4%',
+        marginTop: mobile ? 0 : '-8%',
         position: 'relative',
-        width: `min(976px, 80vw)`,
+        width: mobile ? 230 : 'min(720px, 70vw)',
       }}
     >
-      <LogoSpline height={'min(482px, 40vw)'} width={'min(976px, 80vw)'} />
+      <div
+        aria-label={'Eris AI'}
+        style={{
+          alignItems: 'center',
+          background:
+            'radial-gradient(circle at 32% 28%, #ffffff 0%, #d8ccff 10%, #8d6cff 34%, #3d1a78 62%, #090712 82%)',
+          border: '1px solid rgba(255,255,255,0.18)',
+          borderRadius: '50%',
+          boxShadow:
+            '0 0 80px rgba(128,88,255,0.38), inset -24px -30px 55px rgba(0,0,0,0.5)',
+          display: 'flex',
+          height: size,
+          justifyContent: 'center',
+          width: size,
+        }}
+      >
+        <div
+          style={{
+            color: '#fff',
+            fontSize: mobile ? 34 : 44,
+            fontWeight: 750,
+            letterSpacing: '-0.06em',
+            textShadow: '0 4px 22px rgba(0,0,0,0.5)',
+          }}
+        >
+          ERIS
+        </div>
+      </div>
     </Center>
   );
 });
+
+Logo.displayName = 'ErisLogo';
 
 export default Logo;

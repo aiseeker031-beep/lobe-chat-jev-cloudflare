@@ -1,5 +1,5 @@
 import { ActionIcon } from '@lobehub/ui';
-import { Compass, FolderClosed, MessageSquare } from 'lucide-react';
+import { Compass, FolderClosed, MessageSquare, Settings2 } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -37,6 +37,7 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           title={t('tab.chat')}
         />
       </Link>
+
       {enableKnowledgeBase && (
         <Link aria-label={t('tab.files')} href={'/files'}>
           <ActionIcon
@@ -48,6 +49,7 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           />
         </Link>
       )}
+
       {showMarket && (
         <Link aria-label={t('tab.market')} href={'/market'}>
           <ActionIcon
@@ -59,6 +61,16 @@ const TopActions = memo<TopActionProps>(({ tab }) => {
           />
         </Link>
       )}
+
+      <Link aria-label={t('tab.setting')} href={'/settings/common'}>
+        <ActionIcon
+          active={tab === SidebarTabKey.Setting}
+          icon={Settings2}
+          placement={'right'}
+          size="large"
+          title={t('tab.setting')}
+        />
+      </Link>
     </>
   );
 });

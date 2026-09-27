@@ -1,7 +1,7 @@
 {
-  "name": "@lobehub/chat",
+  "name": "eris-ai",
   "version": "1.11.9",
-  "description": "Lobe Chat - an open-source, high-performance chatbot framework that supports speech synthesis, multimodal, and extensible Function Call plugin system. Supports one-click free deployment of your private ChatGPT/LLM web application.",
+  "description": "Eris AI - a focused AI workspace for conversations, agents, models, tools, and personalized workflows.",
   "keywords": [
     "framework",
     "chatbot",
@@ -14,16 +14,16 @@
     "tts",
     "stt"
   ],
-  "homepage": "https://github.com/lobehub/lobe-chat",
+  "homepage": "https://github.com/aiseeker031-beep/lobe-chat-jev-cloudflare",
   "bugs": {
-    "url": "https://github.com/lobehub/lobe-chat/issues/new/choose"
+    "url": "https://github.com/aiseeker031-beep/lobe-chat-jev-cloudflare"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/lobe-chat.git"
+    "url": "https://github.com/aiseeker031-beep/lobe-chat-jev-cloudflare.git"
   },
   "license": "MIT",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "Eris AI",
   "sideEffects": false,
   "scripts": {
     "build": "next build",
