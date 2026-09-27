@@ -10,7 +10,7 @@ RUN \
     fi \
     # Add required package & update base package
     && apk update \
-    && apk add --no-cache bind-tools proxychains-ng \
+    && apk add --no-cache bind-tools proxychains-ng python3 make g++ cairo-dev pango-dev jpeg-dev giflib-dev pixman-dev pkgconfig \
     && apk upgrade --no-cache \
     # Add user nextjs to run the app
     && addgroup --system --gid 1001 nodejs \
